@@ -12,7 +12,7 @@ st.set_page_config(
 # Chargement des données
 @st.cache_data
 def load_data():
-    df = pd.read_csv("social_media_clean.csv")
+    df = pd.read_csv("social_media_sample.csv")
     df["Acquisition_Cost"] = pd.to_numeric(df["Acquisition_Cost"], errors="coerce")
     df["Date"] = pd.to_datetime(df["Date"])
     df["CTR"] = df["Clicks"] / df["Impressions"] * 100
